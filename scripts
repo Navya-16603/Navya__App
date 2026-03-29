@@ -1,0 +1,11 @@
+#!/bin/bash
+# Install Apache Web Server
+sudo yum update -y
+sudo yum install -y httpd
+
+# Enable and start service
+sudo systemctl enable httpd
+sudo systemctl start httpd
+
+# Set permissions
+sudo chmod -R 755 /var/www/html
