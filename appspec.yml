@@ -6,6 +6,10 @@ files:
     destination: /var/www/html
 
 hooks:
+  BeforeInstall:
+    - location: scripts/install.sh
+      timeout: 300
+
   ApplicationStart:
     - location: scripts/start.sh
       timeout: 300
