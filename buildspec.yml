@@ -6,7 +6,8 @@ phases:
       - echo "Install phase"
   build:
     commands:
-      - echo "Build phase"
+      - echo "No build needed"
+
 artifacts:
   files:
     - '**/*'
