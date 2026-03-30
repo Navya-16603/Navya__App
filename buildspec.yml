@@ -3,14 +3,10 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Install phase started"
+      - echo "Install phase"
   build:
     commands:
-      - echo "Build phase - No build needed, static files only"
-  post_build:
-    commands:
-      - echo "Build completed successfully"
-
+      - echo "Build phase"
 artifacts:
   files:
     - '**/*'
