@@ -1,7 +1,15 @@
-#!/bin/bash
-sudo yum update -y
-sudo yum install -y nodejs npm
+version: 0.0
+os: linux
 
-sudo rm -rf /var/www/html/*
-sudo mkdir -p /var/www/html
-cp -r * /var/www/html
+files:
+  - source: /
+    destination: /var/www/html
+
+hooks:
+  BeforeInstall:
+    - location: scripts/install.sh
+      timeout: 300
+
+  ApplicationStart:
+    - location: scripts/start.sh
+      timeout: 300
