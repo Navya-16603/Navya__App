@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/myspp
+    destination: /home/ec2-user/myapp
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies.sh
