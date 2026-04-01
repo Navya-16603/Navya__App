@@ -8,6 +8,10 @@ phases:
     commands:
       - echo "Build complete"
 artifacts:
-  base-directory: source
   files:
-    - '**/*'
+    - appspec.yml
+    - app.js
+    - index.html
+    - package.json
+    - scripts/* 
+  discard-paths: no
