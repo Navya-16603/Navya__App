@@ -1,9 +1,27 @@
 version: 0.2
 phases:
   install:
+   version: 0.2
+
+phases:phases:
     commands:
+      - echo "Setting file permissions..."
       - chmod +x scripts/clean.sh
       - chmod +x scripts/start_server.sh
+
+  build:
+    commands:
+      - echo "Build step completed."
+
+artifacts:
+  files:
+    - appspec.yml
+    - app.js
+    - index.html
+    - package.json
+    - scripts/*
+  discard-paths: no
+
   build:
     commands:
       - echo "Build complete"
