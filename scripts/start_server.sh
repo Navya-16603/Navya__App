@@ -1,11 +1,11 @@
 #!/bin/bash
+# Start application
+
+echo "Starting application..."
 
 cd /home/ec2-user/myapp
 
-pm2 stop all || true
+# Example for Python Flask/Gunicorn — change as per your app
+nohup python3 app.py > app.log 2>&1 &
 
-npm install
-
-pm2 start app.js --name myapp
-
-pm2 save
+echo "Application started."
