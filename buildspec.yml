@@ -12,10 +12,6 @@ phases:
       - echo "Build completed."
 artifacts:
   files:
-    - app.js
-    - index.html
-    - package.json
-    - appspec.yml
-    - scripts/**/*
-  discard-paths: no
+    - '**/*'
+   
 
