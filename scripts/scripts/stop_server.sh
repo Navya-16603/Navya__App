@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "Stopping application..."
+echo "Stopping existing application..."
 pkill -f app.py || true
-echo "Application stopped."
+pkill -f app.js || true
