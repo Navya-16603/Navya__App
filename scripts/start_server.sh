@@ -1,11 +1,11 @@
 #!/bin/bash
-# Start application
 
-echo "Starting application..."
+echo "Starting Node.js application..."
 
-cd /home/ec2-user/myapp
+cd /var/www/app
 
-# Example for Python Flask/Gunicorn — change as per your app
-nohup python3 app.py > app.log 2>&1 &
+# Stop already running app (optional but safe)
+pkill -f "node app.js" || true
 
-echo "Application started."
+# Start Node.js app
+nohup node app.js > /var/www/app/node_output.log 2>&1 &
