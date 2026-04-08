@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing dependencies
+      - npm install || true
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo No build required for static app
+
+artifacts:
+  files:
+    - '**/*'
+``
